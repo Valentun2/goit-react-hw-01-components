@@ -2,7 +2,7 @@ import { FriendList } from './friendlist/FriendList';
 import { Statistics } from './statistics/Statistics';
 import { Profile } from './profile/Profile';
 import { TransactionHistory } from './transactions/TransactionHistory';
-
+console.log('hello');
 export const App = props => {
   return (
     <>
