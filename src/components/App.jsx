@@ -1,16 +1,15 @@
-import { FriendList } from "./FriendList";
-import { Statistics } from "./Statistics";
-import { Profile } from "./profile";
- 
-export const App = (props) => {
-  console.log(props);
- const {stats,avatar,location,tag,username} = props.datauser
- console.log(username);
+import { FriendList } from './friendlist/FriendList';
+import { Statistics } from './statistics/Statistics';
+import { Profile } from './profile/Profile';
+import { TransactionHistory } from './transactions/TransactionHistory';
+
+export const App = props => {
   return (
-    <div>
-      <Profile data = {props.datauser}/>
-      <Statistics data = {props.data}/>
-      <FriendList data = {props.friends} />
-    </div>
+    <>
+      <Profile data={props.datauser} />
+      <Statistics stats={props.data} />
+      <FriendList data={props.friends} />
+      <TransactionHistory items={props.items} />
+    </>
   );
 };
