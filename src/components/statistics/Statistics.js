@@ -1,10 +1,10 @@
 import styles from './Statistics.module.css';
 import { getRandomColor } from 'random';
 
-export const Statistics = props => {
+export const Statistics = (props) => {
   return (
     <section className={styles.statistics}>
-      <h2 className={styles.title}>Upload stats</h2>
+     { props.title && <h2 className={styles.title}>{props.title}</h2>}
 
       <ul className={styles['stat-list']}>
         {props.stats.map(item => {
